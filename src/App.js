@@ -62,6 +62,11 @@ class App extends Component {
     //   TODO: Update the code here to implement addCartItem
   }
 
+  removeCartItem = id =>
+    this.setState(prevState => ({
+      cartList: prevState.cartList.filter(each => each.id !== id),
+    }))
+
   render() {
     const {cartList} = this.state
 
